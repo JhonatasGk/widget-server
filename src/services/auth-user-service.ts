@@ -70,7 +70,7 @@ export class AuthUserService {
         }
 
         )
-
+        console.log(token)
         return {token, user}
     }
 
