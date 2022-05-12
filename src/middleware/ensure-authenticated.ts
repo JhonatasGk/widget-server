@@ -14,7 +14,7 @@ export function ensureAuthenticated (req: Request, res: Response, next: NextFunc
     if(!authToken){
             req.body.user_id = "e84606c2-b161-4786-a1c8-d9182c4c6f7e"
              
-             console.log('foi')
+             
         return next()
     }
     const [,token] = authToken.split(" ")
