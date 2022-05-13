@@ -56,7 +56,7 @@ routes.get('/signin/callback', (req, res) => {
 })
 routes.post('/authenticate', new AuthUserController().handler)
 
-routes.post('/getfeedbacks', new GetFeedbacksController().handler)
+routes.post('/getfeedbacks',  ensureAuthenticated,  new GetFeedbacksController().handler)
 
 routes.get('/profile', ensureAuthenticated, new ProfileUserController().handler)
 

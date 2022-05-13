@@ -6,7 +6,7 @@ export class GuestUserService {
     async execute(){
        const user = await prisma.user.findFirst({
            where: {
-               name : 'guest'
+               name : 'Guest'
            }
        })
        return user
